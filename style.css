@@ -1,230 +1,75 @@
-/* =================================
-   NeuroSleep Technology V4.0
-   Advanced AI Sleep Technology Website
-================================= */
-
-
-/* ---------- Root ---------- */
-
-
-:root{
-
-
---bg-dark:#050b16;
-
-
---bg-light:#0c1b32;
-
-
---card:
-rgba(255,255,255,.06);
-
-
---border:
-rgba(255,255,255,.15);
-
-
---text:#f5f8ff;
-
-
---muted:#b8c6d9;
-
-
---blue:#62c4ff;
-
-
---blue-strong:#2d8cff;
-
-
-}
-
-
-
-
 *{
 
-
+margin:0;
+padding:0;
 box-sizing:border-box;
 
-
 }
-
-
 
 
 
 html{
 
-
 scroll-behavior:smooth;
 
-
 }
-
-
-
 
 
 
 body{
 
-
-margin:0;
-
-
 font-family:
-
+"Inter",
+"Segoe UI",
 Arial,
-Helvetica,
 sans-serif;
 
+background:#050816;
 
-background:
+color:#ffffff;
 
-radial-gradient(
-
-circle at top,
-
-#17365c,
-
-var(--bg-dark)
-
-);
-
-
-color:var(--text);
-
-
-line-height:1.7;
-
+line-height:1.6;
 
 }
 
 
 
 
-
-img{
-
-
-max-width:100%;
-
-
-display:block;
-
-
-}
-
-
-
-
-
-h1,
-h2,
-h3,
-h4{
-
-
-margin-top:0;
-
-
-}
-
-
-
-
-
-
-h2{
-
-
-color:var(--blue);
-
-
-font-size:
-
-clamp(1.8rem,4vw,2.5rem);
-
-
-text-align:center;
-
-
-}
-
-
-
-
-
-p{
-
-
-color:var(--muted);
-
-
-}
-
-
-
-
-
-
-/* =================================
-Navigation
-================================= */
-
-
-.navbar{
-
-
-position:absolute;
-
-
-top:0;
-
-
-left:0;
-
+.header{
 
 width:100%;
 
+position:fixed;
 
-padding:
+top:0;
 
-30px 70px;
+left:0;
 
+z-index:1000;
 
 display:flex;
 
-
 justify-content:space-between;
-
 
 align-items:center;
 
+padding:25px 8%;
 
-z-index:20;
+background:rgba(5,8,22,0.85);
 
+backdrop-filter:blur(15px);
 
 }
-
-
 
 
 
 .logo{
 
-
-font-size:30px;
-
+font-size:28px;
 
 font-weight:800;
 
-
-letter-spacing:2px;
-
-
-color:var(--blue);
-
+letter-spacing:1px;
 
 }
 
@@ -232,67 +77,49 @@ color:var(--blue);
 
 .logo span{
 
-
-display:block;
-
-
-font-size:10px;
-
-
-letter-spacing:1px;
-
-
-color:var(--muted);
-
-
-margin-top:5px;
-
+color:#38d9ff;
 
 }
 
 
 
-
-
-
-.nav-links{
-
+nav{
 
 display:flex;
 
-
-gap:35px;
-
+gap:30px;
 
 }
 
 
 
-.nav-links a{
-
+nav a{
 
 color:white;
-
 
 text-decoration:none;
 
-
-font-weight:600;
-
+font-size:15px;
 
 transition:.3s;
 
+}
+
+
+
+nav a:hover{
+
+color:#38d9ff;
 
 }
 
 
 
 
-.nav-links a:hover{
 
+section{
 
-color:var(--blue);
-
+padding:110px 8%;
 
 }
 
@@ -300,158 +127,87 @@ color:var(--blue);
 
 
 
-
-
-/* =================================
-Hero
-================================= */
-
-
-
-.hero-v4{
-
+.hero{
 
 min-height:100vh;
 
-
-position:relative;
-
-
-overflow:hidden;
-
-
 display:flex;
 
-
 align-items:center;
 
+justify-content:space-between;
 
-padding:
+gap:50px;
 
-120px 8% 80px;
-
-
-}
-
-
-
-
-
-.hero-background{
-
-
-position:absolute;
-
-
-width:600px;
-
-
-height:600px;
-
-
-background:
-
-rgba(98,196,255,.18);
-
-
-border-radius:50%;
-
-
-filter:
-
-blur(120px);
-
-
-top:-200px;
-
-
-right:-100px;
-
+padding-top:150px;
 
 }
 
 
 
+.hero-content{
 
-.hero-container{
-
-
-position:relative;
-
-
-z-index:2;
-
-
-display:grid;
-
-
-grid-template-columns:
-
-1fr 1fr;
-
-
-gap:60px;
-
-
-align-items:center;
-
-
-max-width:1200px;
-
-
-margin:auto;
-
+width:50%;
 
 }
 
 
 
+.hero h1{
 
-
-.hero-text{
-
-
-max-width:600px;
-
-
-}
-
-
-
-.eyebrow{
-
-
-color:var(--blue);
-
-
-letter-spacing:4px;
-
-
-font-size:.85rem;
-
-
-font-weight:700;
-
-
-}
-
-
-
-
-
-.hero-text h1{
-
-
-font-size:
-
-clamp(3rem,6vw,5rem);
-
+font-size:64px;
 
 line-height:1.1;
 
+margin-bottom:30px;
 
-letter-spacing:2px;
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#38d9ff
+);
 
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.hero p{
+
+font-size:20px;
+
+color:#b7c4d9;
+
+margin-bottom:40px;
+
+max-width:600px;
+
+}
+
+
+
+
+.hero-image{
+
+width:45%;
+
+}
+
+
+
+.hero-image img{
+
+width:100%;
+
+filter:
+drop-shadow(
+0 0 40px
+rgba(56,217,255,.35)
+);
 
 }
 
@@ -459,228 +215,83 @@ letter-spacing:2px;
 
 
 
-
-.hero-text h2{
-
-
-text-align:left;
-
-
-color:white;
-
-
-font-size:2rem;
-
-
-}
-
-
-
-
-.hero-product{
-
+.hero-buttons{
 
 display:flex;
 
-
-justify-content:center;
-
+gap:20px;
 
 }
 
-
-
-
-
-.hero-product img{
-
-
-width:90%;
-
-
-max-width:520px;
-
-
-filter:
-
-drop-shadow(
-
-0 0 60px
-
-rgba(98,196,255,.5)
-
-);
-
-
-animation:
-
-float 5s ease-in-out infinite;
-
-
-}
-
-
-
-
-
-@keyframes float{
-
-
-0%{
-
-
-transform:translateY(0);
-
-
-}
-
-
-
-50%{
-
-
-transform:translateY(-20px);
-
-
-}
-
-
-
-100%{
-
-
-transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* Buttons */
 
 
 .btn{
 
+padding:15px 35px;
 
-display:inline-block;
-
-
-padding:
-
-14px 32px;
-
-
-border-radius:50px;
-
+border-radius:40px;
 
 text-decoration:none;
 
-
-font-weight:700;
-
-
-margin-right:15px;
-
-
-transition:.3s;
-
+font-weight:600;
 
 }
 
 
 
+.primary{
 
+background:#38d9ff;
 
-.btn-primary{
-
-
-background:
-
-linear-gradient(
-
-135deg,
-
-var(--blue),
-
-var(--blue-strong)
-
-);
-
-
-color:#03111f;
-
+color:#001018;
 
 }
 
 
 
+.secondary{
 
+border:1px solid #38d9ff;
 
-.btn-secondary{
-
-
-border:
-
-1px solid var(--border);
-
-
-color:white;
-
+color:#38d9ff;
 
 }
-
-
 
 
 
 .btn:hover{
 
-
-transform:
-
-translateY(-4px);
-
+transform:translateY(-3px);
 
 }
-/* =================================
-Problem Section
-================================= */
 
 
-.problem-section{
 
 
-max-width:1200px;
 
-
-margin:100px auto;
-
-
-padding:70px 40px;
-
+h2{
 
 text-align:center;
 
+font-size:42px;
 
-background:
+margin-bottom:30px;
 
-rgba(255,255,255,.04);
-
-
-border:
-
-1px solid var(--border);
+}
 
 
-border-radius:30px;
 
+.section-text{
+
+text-align:center;
+
+max-width:800px;
+
+margin:0 auto 60px;
+
+color:#aab8cc;
+
+font-size:18px;
 
 }
 
@@ -688,65 +299,68 @@ border-radius:30px;
 
 
 
-.problem-section > p{
-
-
-max-width:700px;
-
-
-margin:
-
-20px auto 50px;
-
-
-}
-
-
-
-
-
-
-.stats-container{
-
+.card-grid{
 
 display:grid;
 
-
 grid-template-columns:
-
 repeat(3,1fr);
-
 
 gap:30px;
 
-
 }
 
 
 
 
 
-.stat-card{
-
-
-padding:40px;
-
+.card{
 
 background:
 
-var(--card);
-
+linear-gradient(
+145deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.02)
+);
 
 border:
 
-1px solid var(--border);
+1px solid rgba(255,255,255,.1);
 
+padding:35px;
 
-border-radius:25px;
-
+border-radius:20px;
 
 transition:.3s;
 
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:#38d9ff;
+
+}
+
+
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.card p{
+
+color:#b7c4d9;
 
 }
 
@@ -754,462 +368,143 @@ transition:.3s;
 
 
 
-.stat-card:hover{
+.technology{
 
-
-transform:
-
-translateY(-10px);
-
+background:#080d20;
 
 }
 
 
 
-
-
-.stat-card h3{
-
-
-font-size:45px;
-
-
-color:var(--blue);
-
-
-}
-
-
-
-
-
-
-
-/* =================================
-Solution Section
-================================= */
-
-
-.solution-section{
-
-
-max-width:1200px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
+.tech-grid{
 
 display:grid;
 
-
 grid-template-columns:
-
-1fr 1fr;
-
-
-gap:60px;
-
-
-align-items:center;
-
-
-}
-
-
-
-
-
-.solution-content ul{
-
-
-padding-left:20px;
-
-
-}
-
-
-
-
-
-.solution-content li{
-
-
-margin:18px 0;
-
-
-color:var(--muted);
-
-
-font-size:1.1rem;
-
-
-}
-
-
-
-
-
-.solution-image img{
-
-
-border-radius:30px;
-
-
-box-shadow:
-
-0 0 50px
-
-rgba(98,196,255,.25);
-
-
-}
-
-
-
-
-
-
-
-
-/* =================================
-Technology Architecture
-================================= */
-
-
-
-.technology-section{
-
-
-max-width:1200px;
-
-
-margin:120px auto;
-
-
-padding:70px 40px;
-
-
-text-align:center;
-
-
-}
-
-
-
-
-
-.technology-grid{
-
-
-display:grid;
-
-
-grid-template-columns:
-
 repeat(4,1fr);
-
 
 gap:25px;
 
-
-margin-top:60px;
-
-
 }
 
 
 
 
+.tech-card{
 
-.technology-card{
+padding:30px;
 
-
-padding:35px 25px;
-
+border-radius:18px;
 
 background:
+rgba(255,255,255,.05);
 
-var(--card);
-
-
-border:
-
-1px solid var(--border);
-
-
-border-radius:25px;
-
-
-transition:.3s;
-
+border:1px solid rgba(255,255,255,.1);
 
 }
 
 
 
+.tech-card h3{
 
+color:#38d9ff;
 
-.technology-card:hover{
-
-
-transform:
-
-translateY(-12px);
-
-
-box-shadow:
-
-0 0 40px
-
-rgba(98,196,255,.25);
-
+margin-bottom:15px;
 
 }
 
 
 
+.tech-card p{
+
+color:#bbc6d8;
+
+}/* Product Showcase */
 
 
-.technology-card h3{
+.product{
 
-
-font-size:50px;
-
-
-color:var(--blue);
-
-
-}
-
-
-
-
-
-.technology-card h4{
-
-
-color:white;
-
-
-font-size:1.2rem;
-
+background:#050816;
 
 }
-
-
-
-
-
-
-
-
-/* =================================
-Product Showcase V4.0
-================================= */
 
 
 
 .product-showcase{
 
-
-max-width:1200px;
-
-
-margin:120px auto;
-
-
-padding:80px 40px;
-
-
-background:
-
-rgba(255,255,255,.04);
-
-
-border:
-
-1px solid var(--border);
-
-
-border-radius:35px;
-
-
-}
-
-
-
-
-
-.product-header{
-
-
-text-align:center;
-
-
-max-width:850px;
-
-
-margin:auto;
-
-
-}
-
-
-
-
-
-.product-header p{
-
-
-font-size:1.15rem;
-
-
-margin-top:20px;
-
-
-}
-
-
-
-
-
-.product-content{
-
-
-margin-top:70px;
-
-
-display:grid;
-
-
-grid-template-columns:
-
-1fr 1fr;
-
-
-gap:60px;
-
+display:flex;
 
 align-items:center;
 
+gap:60px;
 
 }
-
-
 
 
 
 .product-image{
 
-
-display:flex;
-
-
-justify-content:center;
-
+width:50%;
 
 }
-
 
 
 
 .product-image img{
 
-
-width:90%;
-
-
-max-width:500px;
-
-
-border-radius:35px;
-
-
-filter:
-
-drop-shadow(
-
-0 0 50px
-
-rgba(98,196,255,.35)
-
-);
-
-
-}
-
-
-
-
-
-.product-features{
-
-
-display:flex;
-
-
-flex-direction:column;
-
-
-gap:25px;
-
-
-}
-
-
-
-
-
-.feature-card{
-
-
-padding:30px;
-
-
-background:
-
-var(--card);
-
-
-border:
-
-1px solid var(--border);
-
+width:100%;
 
 border-radius:25px;
 
-
-transition:.35s;
-
-
-}
-
-
-
-
-
-.feature-card:hover{
-
-
-transform:
-
-translateX(12px);
-
-
-border-color:
-
-var(--blue);
-
-
 box-shadow:
+0 0 50px
+rgba(56,217,255,.25);
 
-0 0 35px
+}
 
-rgba(98,196,255,.2);
 
+
+.product-info{
+
+width:50%;
+
+}
+
+
+
+.product-info h3{
+
+font-size:35px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.product-info p{
+
+color:#b7c4d9;
+
+font-size:18px;
+
+}
+
+
+
+.product-info ul{
+
+margin-top:30px;
+
+}
+
+
+
+.product-info li{
+
+margin:15px 0;
+
+color:#dce6f5;
 
 }
 
@@ -1217,16 +512,14 @@ rgba(98,196,255,.2);
 
 
 
-.feature-card h3{
 
 
-font-size:42px;
+/* Ecosystem */
 
 
-color:
+.ecosystem{
 
-var(--blue);
-
+background:#080d20;
 
 }
 
@@ -1234,14 +527,40 @@ var(--blue);
 
 
 
-.feature-card h4{
+.application-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:25px;
+
+}
 
 
-color:white;
 
 
-font-size:1.35rem;
+.application-card{
 
+background:
+rgba(255,255,255,.05);
+
+padding:30px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.application-card h3{
+
+color:#38d9ff;
+
+margin-bottom:15px;
 
 }
 
@@ -1249,11 +568,45 @@ font-size:1.35rem;
 
 
 
-.feature-card p{
+/* Market */
 
 
-line-height:1.7;
+.market-grid{
 
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.market-card{
+
+padding:35px;
+
+background:
+linear-gradient(
+145deg,
+rgba(56,217,255,.08),
+rgba(255,255,255,.03)
+);
+
+border-radius:20px;
+
+}
+
+
+
+
+.market-card h3{
+
+font-size:26px;
+
+color:#38d9ff;
 
 }
 
@@ -1261,23 +614,52 @@ line-height:1.7;
 
 
 
+/* Business */
+
+
+.business{
+
+background:#080d20;
+
+}
 
 
 
-/* =================================
-AI Architecture Flow
-================================= */
+.business-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:30px;
+
+}
 
 
 
-.architecture-map{
+.business-card{
 
+padding:40px;
 
-margin-top:90px;
+background:
+rgba(255,255,255,.05);
 
+border-radius:20px;
 
 text-align:center;
 
+}
+
+
+
+.business-card h3{
+
+color:#38d9ff;
+
+font-size:28px;
+
+margin-bottom:20px;
 
 }
 
@@ -1285,14 +667,53 @@ text-align:center;
 
 
 
-.architecture-map h3{
+/* Advantage */
 
 
-color:white;
+.comparison{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:25px;
+
+}
 
 
-font-size:2rem;
 
+.comparison div{
+
+padding:35px;
+
+background:
+rgba(255,255,255,.05);
+
+border-radius:20px;
+
+}
+
+
+
+.comparison h3{
+
+margin-bottom:15px;
+
+}
+
+
+
+.highlight{
+
+border:
+
+2px solid #38d9ff;
+
+box-shadow:
+
+0 0 30px
+rgba(56,217,255,.3);
 
 }
 
@@ -1300,26 +721,60 @@ font-size:2rem;
 
 
 
-.architecture-flow{
 
 
-margin-top:45px;
+
+/* Roadmap */
 
 
-display:flex;
+.roadmap{
+
+background:#050816;
+
+}
 
 
-justify-content:center;
+
+.roadmap-container{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:25px;
+
+}
 
 
-align-items:center;
+
+.roadmap-item{
+
+padding:35px;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.06);
+
+}
 
 
-gap:20px;
+
+.roadmap-item h3{
+
+color:#38d9ff;
+
+font-size:30px;
+
+}
 
 
-flex-wrap:wrap;
 
+.roadmap-item h4{
+
+margin:15px 0;
 
 }
 
@@ -1327,252 +782,75 @@ flex-wrap:wrap;
 
 
 
-.architecture-flow div{
 
 
-padding:
-
-25px 35px;
+/* Acquisition */
 
 
-min-width:180px;
-
+.acquisition{
 
 background:
 
 linear-gradient(
-
-135deg,
-
-#10294d,
-
-#07101f
-
+180deg,
+#080d20,
+#050816
 );
 
-
-border:
-
-1px solid var(--blue);
-
-
-border-radius:20px;
-
-
-color:white;
-
-
-font-weight:700;
-
-
-}
-
-
-
-
-
-.architecture-flow span{
-
-
-color:var(--blue);
-
-
-font-size:30px;
-
-
-}
-/* =================================
-AI Ecosystem
-================================= */
-
-
-.ecosystem-section{
-
-
-max-width:1200px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
-
-}
-
-
-
-
-
-.ecosystem-container{
-
-
-display:grid;
-
-
-grid-template-columns:
-
-1fr 1fr;
-
-
-gap:60px;
-
-
-align-items:center;
-
-
-}
-
-
-
-
-
-.ecosystem-image img{
-
-
-border-radius:30px;
-
-
-}
-
-
-
-
-
-.ecosystem-text h3{
-
-
-font-size:2rem;
-
-
-color:white;
-
-
-}
-
-
-
-
-
-
-
-/* =================================
-Application
-================================= */
-
-
-.application-section{
-
-
-max-width:1000px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
-
 text-align:center;
 
-
 }
 
 
 
-
-
-.application-section img{
-
-
-max-width:500px;
-
-
-margin:40px auto;
-
-
-border-radius:30px;
-
-
-box-shadow:
-
-
-0 0 40px
-
-rgba(98,196,255,.25);
-
-
-}
-
-
-
-
-
-.application-section p{
-
-
-font-size:1.1rem;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =================================
-Founder
-================================= */
-
-
-.founder-section{
-
-
-max-width:1000px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
-
-text-align:center;
-
-
-background:
-
-rgba(255,255,255,.04);
-
-
-border-radius:30px;
-
-
-border:
-
-1px solid var(--border);
-
-
-}
-
-
-
-
-
-.founder-section p{
-
+.acquisition > p{
 
 max-width:800px;
 
+margin:0 auto 50px;
 
-margin:
+font-size:20px;
 
-20px auto;
+color:#c5d1e4;
 
+}
+
+
+
+.acquisition-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+
+.acquisition-grid div{
+
+padding:40px;
+
+background:
+
+rgba(255,255,255,.06);
+
+border-radius:20px;
+
+}
+
+
+
+
+.acquisition-grid h3{
+
+color:#38d9ff;
+
+margin-bottom:15px;
 
 }
 
@@ -1582,78 +860,61 @@ margin:
 
 
 
+/* Founder */
 
 
-/* =================================
-Partners
-================================= */
-
-
-.partner-section{
-
-
-max-width:1200px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
+.founder{
 
 text-align:center;
 
+max-width:1000px;
+
+margin:auto;
 
 }
 
 
 
+.founder p{
+
+font-size:22px;
+
+color:#c5d1e4;
+
+margin:25px auto;
+
+}
+
+
+
+
+
+
+/* Partnership */
 
 
 .partner-grid{
 
-
 display:grid;
 
-
 grid-template-columns:
+repeat(3,1fr);
 
-repeat(4,1fr);
-
-
-gap:25px;
-
-
-margin-top:50px;
-
+gap:30px;
 
 }
 
 
 
+.partner-grid div{
 
-
-.partner-card{
-
-
-padding:35px 25px;
-
+padding:35px;
 
 background:
 
-var(--card);
+rgba(255,255,255,.05);
 
-
-border-radius:25px;
-
-
-border:
-
-1px solid var(--border);
-
-
-transition:.3s;
-
+border-radius:20px;
 
 }
 
@@ -1661,175 +922,78 @@ transition:.3s;
 
 
 
-.partner-card:hover{
+/* Contact */
 
 
-transform:
-
-translateY(-10px);
-
-
-border-color:
-
-var(--blue);
-
-
-}
-
-
-
-
-
-.partner-card h3{
-
-
-color:
-
-var(--blue);
-
-
-}
-
-
-
-
-
-.partner-actions{
-
-
-margin-top:50px;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =================================
-Contact
-================================= */
-
-
-.contact-section{
-
-
-max-width:900px;
-
-
-margin:100px auto;
-
-
-padding:70px;
-
+.contact{
 
 text-align:center;
 
+background:#080d20;
+
+}
+
+
+
+.contact-box{
+
+margin:40px auto;
+
+max-width:500px;
+
+padding:40px;
+
+border-radius:25px;
 
 background:
 
-rgba(255,255,255,.04);
+rgba(255,255,255,.06);
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+}
 
 
-border-radius:30px;
 
+.contact-box h3{
+
+color:#38d9ff;
+
+font-size:28px;
 
 }
 
 
 
 
-
-.contact-section p{
-
-
-font-size:1.1rem;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =================================
-Footer
-================================= */
+/* Footer */
 
 
 footer{
 
-
 text-align:center;
 
+padding:50px 20px;
 
-padding:
+background:#03050d;
 
-60px 20px;
-
-
-color:var(--muted);
-
+color:#8795aa;
 
 }
 
 
 
+.footer-logo{
 
+font-size:30px;
 
-footer p{
+font-weight:800;
 
+color:white;
 
-line-height:2;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =================================
-Mobile Responsive
-================================= */
-
-
-@media(max-width:900px){
-
-
-
-
-
-.navbar{
-
-
-padding:
-
-25px;
-
-
-}
-
-
-
-
-.nav-links{
-
-
-display:none;
-
+margin-bottom:15px;
 
 }
 
@@ -1838,106 +1002,76 @@ display:none;
 
 
 
-.hero-container,
+
+/* Responsive */
 
 
-.solution-section,
+@media(max-width:1100px){
 
 
-.ecosystem-container{
+.hero{
 
+flex-direction:column;
+
+}
+
+
+
+.hero-content,
+.hero-image{
+
+width:100%;
+
+}
+
+
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+
+
+.card-grid,
+.tech-grid,
+.market-grid,
+.business-grid,
+.comparison,
+.roadmap-container,
+.acquisition-grid,
+.partner-grid,
+.application-grid{
 
 grid-template-columns:
-
-1fr;
-
-
-text-align:center;
-
+repeat(2,1fr);
 
 }
-
-
-
-
-
-.hero-text h1{
-
-
-font-size:3rem;
-
-
-}
-
-
-
-
-
-.hero-text h2{
-
-
-text-align:center;
-
-
-}
-
-
-
-
-
-.stats-container{
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-
-
-
-.technology-grid{
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-
-
-
-.product-content{
-
-
-grid-template-columns:
-
-1fr;
-
-
-}
-
-
-
 
 
 .product-showcase{
 
+flex-direction:column;
 
-margin:
-
-60px 20px;
+}
 
 
-padding:
 
-50px 25px;
+.product-image,
+.product-info{
+
+width:100%;
+
+}
+
+
+
+nav{
+
+display:none;
+
+}
 
 
 }
@@ -1945,84 +1079,72 @@ padding:
 
 
 
+@media(max-width:600px){
 
-.feature-card:hover{
 
+section{
 
-transform:none;
-
+padding:80px 5%;
 
 }
 
 
 
+h2{
+
+font-size:32px;
+
+}
 
 
-.architecture-flow{
 
+.hero h1{
+
+font-size:38px;
+
+}
+
+
+
+.card-grid,
+.tech-grid,
+.market-grid,
+.business-grid,
+.comparison,
+.roadmap-container,
+.acquisition-grid,
+.partner-grid,
+.application-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero-buttons{
 
 flex-direction:column;
 
+}
+
+
+
+.btn{
+
+text-align:center;
 
 }
 
 
 
+.product-info h3{
 
-
-.partner-grid{
-
-
-grid-template-columns:
-
-1fr;
-
+font-size:28px;
 
 }
 
 
 
-
-
-.solution-section{
-
-
-padding:40px 25px;
-
-
 }
 
-
-
-
-
-.ecosystem-section{
-
-
-padding:40px 25px;
-
-
-}
-
-
-
-
-
-.application-section,
-
-
-.founder-section,
-
-
-.partner-section{
-
-
-padding:40px 25px;
-
-
-}
-
-
-
-
-}
