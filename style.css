@@ -37,30 +37,14 @@ line-height:1.6;
 
 .header{
 
-width:100%;
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-z-index:1000;
-
 display:flex;
-
+align-items:center;
 justify-content:space-between;
 
-align-items:center;
-
-padding:25px 8%;
-
-background:rgba(5,8,22,0.85);
-
-backdrop-filter:blur(15px);
+padding:
+25px 80px;
 
 }
-
 
 
 .logo{
@@ -1148,3 +1132,15 @@ font-size:28px;
 
 }
 
+.logo img{
+
+width:250px;
+height:auto;
+
+filter:
+drop-shadow(
+0 0 12px
+rgba(56,217,255,.45)
+);
+
+}
