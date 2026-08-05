@@ -452,4 +452,45 @@ grid-template-columns:1fr;
 
 
 
+}.contact-box{
+
+margin-top:40px;
+
+padding:40px;
+
+max-width:600px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+background:
+rgba(255,255,255,.05);
+
+border:
+
+1px solid
+
+rgba(56,217,255,.25);
+
+border-radius:20px;
+
+}
+
+
+.contact-box h3{
+
+font-size:28px;
+
+color:#38d9ff;
+
+margin-bottom:15px;
+
+}
+
+
+.contact-box p{
+
+margin-bottom:15px;
+
 }
