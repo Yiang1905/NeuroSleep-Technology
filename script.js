@@ -1,18 +1,15 @@
-
 // NeuroSleep Technology V5.0
-// Interactive Experience Script
-
-
 
 document.addEventListener(
 "DOMContentLoaded",
 function(){
 
+console.log(
+"NeuroSleep Technology V5.0 Loaded"
+);
 
 
-/*
-Smooth Navigation
-*/
+// Smooth navigation
 
 const links =
 document.querySelectorAll(
@@ -21,13 +18,11 @@ document.querySelectorAll(
 
 
 links.forEach(
-function(link){
-
+link=>{
 
 link.addEventListener(
 "click",
 function(e){
-
 
 const target =
 document.querySelector(
@@ -49,168 +44,42 @@ behavior:"smooth"
 
 }
 
+}
+
+);
 
 });
 
 
-});
 
+// Button interaction
 
-
-
-
-
-
-/*
-Scroll Reveal Animation
-*/
-
-
-const elements =
+const buttons =
 document.querySelectorAll(
-".card, .tech-card, .market-card, .business-card, .roadmap-item, .application-card, .acquisition-grid div"
+".btn"
 );
 
 
+buttons.forEach(
 
-const observer =
-new IntersectionObserver(
-
-(entries)=>{
+button=>{
 
 
-entries.forEach(
+button.addEventListener(
+"click",
+function(){
 
-entry=>{
-
-
-if(entry.isIntersecting){
-
-
-entry.target.style.opacity="1";
-
-entry.target.style.transform=
-"translateY(0)";
-
-
-}
+console.log(
+"NeuroSleep Partnership Interest"
+);
 
 
 }
 
 );
-
-
-},
-
-{
-
-threshold:0.15
-
-}
-
-
-);
-
-
-
-
-
-elements.forEach(
-
-element=>{
-
-
-element.style.opacity="0";
-
-element.style.transform=
-"translateY(40px)";
-
-element.style.transition=
-"all .8s ease";
-
-
-observer.observe(element);
 
 
 });
-
-
-
-
-
-
-
-
-
-/*
-Hero Image Floating Effect
-*/
-
-
-const heroImage =
-document.querySelector(
-".hero-image img"
-);
-
-
-
-if(heroImage){
-
-
-let direction=1;
-
-
-setInterval(
-
-()=>{
-
-
-heroImage.style.transform =
-`translateY(${direction*8}px)`;
-
-
-direction *= -1;
-
-
-},
-
-2000
-
-
-);
-
-
-}
-
-
-
-
-
-
-
-
-/*
-Current Year Auto Update
-*/
-
-
-const year =
-document.querySelector(
-"footer p:last-child"
-);
-
-
-
-if(year){
-
-year.innerHTML =
-year.innerHTML.replace(
-"2026",
-new Date().getFullYear()
-);
-
-}
 
 
 
