@@ -769,4 +769,52 @@ grid-template-columns:1fr;
 
 
 
+}.brand{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+.logo{
+
+width:90px;
+
+height:70px;
+
+object-fit:contain;
+
+display:block;
+
+}
+
+
+.brand-text h2{
+
+font-size:28px;
+
+font-weight:800;
+
+}
+
+
+.brand-text p{
+
+font-size:14px;
+
+color:#cbd5e1;
+
+}
+
+
+.brand-text span{
+
+font-size:12px;
+
+color:#64748b;
+
 }
