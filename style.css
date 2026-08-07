@@ -929,4 +929,94 @@ color:#64748b;
 .document-card a:hover{
     background:#ffffff;
     transform:translateY(-3px);
+}/* Investor Section */
+
+.investor-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+
+.investor-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(56,189,248,.3);
+
+border-radius:25px;
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+.investor-card h3{
+
+font-size:25px;
+
+color:#38bdf8;
+
+margin-bottom:20px;
+
+}
+
+
+.investor-card p{
+
+color:#cbd5e1;
+
+margin-bottom:30px;
+
+}
+
+
+.investor-card a{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:12px 35px;
+
+border-radius:40px;
+
+background:#38bdf8;
+
+color:#020617;
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+.investor-card a:hover{
+
+background:white;
+
+}
+
+
+@media(max-width:900px){
+
+.investor-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
