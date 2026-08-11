@@ -2077,4 +2077,91 @@ max-height:550px;
 
 object-fit:cover;
 
+}.document-card{
+
+background:
+rgba(255,255,255,0.05);
+
+border:1px solid
+rgba(255,255,255,0.15);
+
+border-radius:20px;
+
+padding:30px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+.document-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+.document-card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 28px;
+
+border-radius:30px;
+
+background:#00c6ff;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+}/* ================= PDF RESOURCE LINKS ================= */
+
+.pdf-links{
+
+margin-top:25px;
+
+}
+
+
+.pdf-links p{
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+
+.pdf-links a{
+
+display:inline-block;
+
+margin:8px;
+
+padding:10px 22px;
+
+border-radius:25px;
+
+text-decoration:none;
+
+border:1px solid rgba(255,255,255,0.4);
+
+transition:0.3s;
+
+}
+
+
+.pdf-links a:hover{
+
+transform:translateY(-3px);
+
+opacity:0.8;
+
 }
