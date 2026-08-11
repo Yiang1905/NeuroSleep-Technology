@@ -2164,4 +2164,49 @@ transform:translateY(-3px);
 
 opacity:0.8;
 
+}/* ================= INVESTOR RESOURCES ================= */
+
+.pdf-links{
+
+display:block;
+
+margin-top:30px;
+
+}
+
+
+.pdf-links p{
+
+font-size:20px;
+
+font-weight:600;
+
+margin-bottom:15px;
+
+}
+
+
+.pdf-links a{
+
+display:inline-block;
+
+margin:8px;
+
+padding:12px 24px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+text-decoration:none;
+
+}
+
+
+.pdf-links a:hover{
+
+transform:translateY(-3px);
+
+transition:0.3s;
+
 }
