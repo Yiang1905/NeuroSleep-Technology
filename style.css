@@ -566,6 +566,7 @@ rgba(0,212,255,.25);
 
 .floating-card{
 
+display:none;
 
 position:absolute;
 
