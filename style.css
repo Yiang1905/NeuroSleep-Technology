@@ -2122,48 +2122,6 @@ text-decoration:none;
 
 font-weight:600;
 
-}/* ================= PDF RESOURCE LINKS ================= */
-
-.pdf-links{
-
-margin-top:25px;
-
-}
-
-
-.pdf-links p{
-
-font-size:18px;
-
-margin-bottom:15px;
-
-}
-
-
-.pdf-links a{
-
-display:inline-block;
-
-margin:8px;
-
-padding:10px 22px;
-
-border-radius:25px;
-
-text-decoration:none;
-
-border:1px solid rgba(255,255,255,0.4);
-
-transition:0.3s;
-
-}
-
-
-.pdf-links a:hover{
-
-transform:translateY(-3px);
-
-opacity:0.8;
 
 }/* ================= INVESTOR RESOURCES ================= */
 
