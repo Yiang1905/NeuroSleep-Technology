@@ -2174,71 +2174,96 @@ opacity:.8;
 
 }
 
-/* =========================================================
-   FINAL V8.2 GRID REPAIR
-   Only targets the affected card groups.
-   ========================================================= */
 
-/* Technology: the three feature cards under the main
-   NeuroSleep Adaptive Sleep Pillow block. */
+/* ================= TECHNOLOGY FULL WIDTH FIX ================= */
+
+#technology{
+    width:100vw !important;
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+}
+
 #technology .feature-grid{
-    display:grid !important;
-    width:100% !important;
-    max-width:1400px !important;
-    margin:40px auto 0 !important;
-    padding:0 !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    gap:30px !important;
-    justify-content:center !important;
-    align-items:stretch !important;
-    box-sizing:border-box !important;
-}
-
-#technology .feature-grid > .feature-card{
-    display:flex !important;
     width:100% !important;
     max-width:none !important;
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:36px !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+#technology .feature-card{
+    width:100% !important;
     min-width:0 !important;
-    margin:0 !important;
     box-sizing:border-box !important;
 }
 
-/* Platform: keep the platform cards centered as well. */
+#technology .feature-card h3{
+    font-size:26px !important;
+    line-height:1.3 !important;
+}
+
+#technology .feature-card p{
+    font-size:16px !important;
+    line-height:1.7 !important;
+}
+
+/* ================= TECHNOLOGY FEATURE WIDTH FIX ================= */
+
+#technology .feature-grid{
+    width:100%;
+    max-width:1200px;
+    margin:40px auto 0;
+}
+
+#technology .feature-card{
+    min-width:0;
+}
+
+@media(min-width:901px){
+    #technology .feature-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    }
+
+    #technology{
+        padding-left:4%;
+        padding-right:4%;
+    }
+}
+
+/* ================= V8.2 PLATFORM — FINAL CENTERED 3-COLUMN FIX ================= */
 #platform .v82-platform-grid{
-    display:grid !important;
-    width:100% !important;
-    max-width:1400px !important;
-    margin:40px auto 0 !important;
-    padding:0 !important;
-    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
-    gap:30px !important;
-    justify-content:center !important;
-    align-items:stretch !important;
-    box-sizing:border-box !important;
+    width:100%;
+    max-width:1200px;
+    margin:40px auto 0;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:30px;
+    justify-content:center;
+    align-items:stretch;
+    box-sizing:border-box;
 }
 
-#platform .v82-platform-grid > .feature-card{
-    display:flex !important;
-    width:100% !important;
-    max-width:none !important;
-    min-width:0 !important;
-    margin:0 !important;
-    box-sizing:border-box !important;
+#platform .v82-platform-grid .feature-card{
+    width:100%;
+    min-width:0;
+    margin:0;
+    box-sizing:border-box;
 }
 
-/* Keep both affected grids centered when the viewport is narrower. */
-@media(max-width:900px){
-    #technology .feature-grid,
+@media(max-width:1000px){
     #platform .v82-platform-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-        max-width:900px !important;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        max-width:900px;
     }
 }
 
 @media(max-width:600px){
-    #technology .feature-grid,
     #platform .v82-platform-grid{
-        grid-template-columns:1fr !important;
-        max-width:520px !important;
+        grid-template-columns:1fr;
+        max-width:520px;
     }
 }
+
